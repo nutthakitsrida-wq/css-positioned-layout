@@ -1,5 +1,62 @@
+html,
 body {
-  font-family: "Kanit";
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-/* Start coding here */
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: black;
+}
+
+/* Black container section — full page */
+.shop-section {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image card with white border */
+.image-card {
+  position: relative;
+  border: 6px solid white;
+  max-width: 380px;
+}
+
+.image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Gray tag label at top right */
+.tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #666666;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Text overlay at bottom left with dark gradient */
+.title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  color: white;
+}
+
+.title-overlay p {
+  margin: 0;
+  font-size: 18px;
+}

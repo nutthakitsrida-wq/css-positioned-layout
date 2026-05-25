@@ -1,1 +1,147 @@
-/* Start coding here */
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sarabun", sans-serif;
+  background-color: #0f0f1a;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Main chat container — full-screen rectangle */
+.chatroom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Gray header bar */
+.chatroom-header {
+  background-color: #808080;
+  padding: 16px 24px;
+}
+
+.chatroom-header h1 {
+  margin: 0;
+  color: white;
+  font-size: 28px;
+  font-weight: normal;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* White message area — fills remaining screen height */
+.chat-area {
+  position: relative;
+  flex: 1;
+  background-color: white;
+  padding: 24px;
+}
+
+/*
+  Each row uses position: relative so child wrappers
+  can be placed with position: absolute.
+*/
+.message-row {
+  position: relative;
+  width: 100%;
+  min-height: 56px;
+  margin-bottom: 16px;
+}
+
+/*
+  Wrapper uses position: absolute to align bubbles
+  to the left or right side of the row.
+*/
+.bubble-wrap {
+  position: absolute;
+  top: 0;
+}
+
+.bubble-wrap-right {
+  right: 0;
+}
+
+.bubble-wrap-left {
+  left: 0;
+}
+
+/* Chat bubble pill shape */
+.bubble {
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.bubble-green {
+  background-color: #00cd00;
+  color: black;
+}
+
+/* Small tail on the top green bubble */
+.bubble-tail {
+  position: relative;
+}
+
+.bubble-tail::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #00cd00;
+  transform: rotate(35deg);
+}
+
+/*
+  Light gray bubble uses position: relative so the
+  close button can sit outside with position: absolute.
+*/
+.bubble-light-gray {
+  position: relative;
+  background-color: #e0e0e0;
+  color: black;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* x button — outside the top-right of the gray bubble */
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #c8c8c8;
+  color: #333;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.bubble-gray {
+  width: 180px;
+  height: 42px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 18px;
+  background-color: #808080;
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+}
